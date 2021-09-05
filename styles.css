@@ -1,0 +1,75 @@
+:root {
+
+    /* Gradient */
+    --main-gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+
+    /* Neutral colors */
+    --very-light-grayish-blue: hsl(240, 78%, 98%);
+    --light-grayish-blue: hsl(234, 14%, 74%);
+    --grayish-blue: hsl(233, 13%, 49%);
+    --dark-grayish-blue: hsl(232, 13%, 33%);
+
+    /* Font */
+    --montserrat: 'Montserrat', sans-serif;
+}
+
+html {
+    font-family: var(--montserrat);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+
+
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 20px;
+    left: 20px;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    width: 56px;
+    height: 32px;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #2196F3;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(24px);
+    -ms-transform: translateX(24px);
+    transform: translateX(24px);
+}
+  
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
