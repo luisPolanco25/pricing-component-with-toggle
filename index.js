@@ -8,10 +8,12 @@
     const anualPricing = (pricesArr = []) => {
     
         return pricesArr.map(price => {
-            const text = price.innerText.split('');
-            text.splice(3, 0, '9');
-            price.innerText = text.join('')
-            return text; 
+            setTimeout(() => {
+                const text = price.innerText.split('');
+                text.splice(3, 0, '9');
+                price.innerText = text.join('')
+                return text; 
+            }, 200);
         });
     
     }
@@ -21,18 +23,21 @@
         return pricesArr.map(price => {
             const text = price.innerText.split('');
             if (text.length >= 7) {
-                text.splice(3, 1);
-                price.innerText = text.join('')
-                return text; 
+                setTimeout(() => {
+                    text.splice(3, 1);
+                    price.innerText = text.join('')
+                    return text; 
+                }, 200);
             } else {
-                return text.join('');
+                setTimeout(() => {
+                    return text.join('');
+                }, 200);
             }
             
         });
     
     }
-    
-    
+
     
     
     toggle.addEventListener('change', () => {
