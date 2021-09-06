@@ -232,3 +232,99 @@ input:checked + .slider:before {
     left: 0;
     z-index: 0;
 }
+
+@media (max-width: 1075px) {
+    #cards .price {
+        font-size: 3.8rem;
+    }
+
+    #cards div {
+        width: 285px;
+    }
+
+    .side-card {
+        height: 422px;
+    }
+
+    #middle-card {
+        height: 468px;
+    }
+}
+
+@media (max-width: 875px) {
+
+    main {
+        padding-bottom: 48px;
+    }
+
+    #toggle-box {
+        margin-bottom: 90px;
+    }
+
+    #toggle-box h1 {
+        font-size: 2.4rem;
+        margin-bottom: 46px;
+    }
+    
+    #cards {
+        flex-direction: column;
+    }
+
+    #cards div {
+        width: 87%;
+        height: 477.59px;
+        margin-bottom: 32px;
+        padding: 40px 34px 36px 34px !important;
+    }
+
+    #cards div h2 {
+        font-size: 1.4rem;
+        margin-bottom: 24px;
+    }
+
+    #cards div p {
+        font-size: 1.14rem;
+    }
+
+    #cards button {
+        margin-top: 36px;
+    }
+
+    #cards .price {
+        font-size: 4rem;
+    }
+
+    #bg-top {
+        top: -32px;
+        right: -198px;
+    }
+
+    #bg-bottom {
+        display: none;
+    }
+}
+
+@media (max-width: 360px) {
+
+    #cards div {
+        height: 458px;
+    }
+    
+    #cards .price {
+        font-size: 3.4rem;
+    }
+
+}
+
+@media (max-width: 315px) {
+
+    #cards div {
+        height: 444px;
+        padding: 30px 24px 16px 24px !important;
+    }
+    
+    #cards .price {
+        font-size: 3rem;
+    }
+    
+}
