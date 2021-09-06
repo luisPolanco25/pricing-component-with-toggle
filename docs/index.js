@@ -2,7 +2,6 @@
     
     const toggle = document.querySelector('input');
     const price = document.querySelectorAll('#cards div .price');
-    
     const pricesArr = Array.from(price);
     
     const anualPricing = (pricesArr = []) => {
@@ -11,7 +10,8 @@
             setTimeout(() => {
                 const text = price.innerText.split('');
                 text.splice(3, 0, '9');
-                price.innerText = text.join('')
+                text.shift();
+                price.innerHTML = `<span>$</span>${text.join('')}`;
                 return text; 
             }, 200);
         });
@@ -25,12 +25,14 @@
             if (text.length >= 7) {
                 setTimeout(() => {
                     text.splice(3, 1);
-                    price.innerText = text.join('')
+                    text.shift();
+                    price.innerHTML = `<span>$</span>${text.join('')}`;
                     return text; 
                 }, 200);
             } else {
                 setTimeout(() => {
-                    return text.join('');
+                    text.shift();
+                    price.innerHTML = `<span>$</span>${text.join('')}`;
                 }, 200);
             }
             
